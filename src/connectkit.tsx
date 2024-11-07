@@ -10,7 +10,7 @@ import { EntryPosition, wallet } from '@particle-network/connectkit/wallet';
 // embedded wallet end
 
 // evm start
-import { arbitrum, base, scroll, mainnet, polygon, sepolia, optimism, arbitrumSepolia, bsc, baseSepolia } from '@particle-network/connectkit/chains';
+import { sepolia, baseSepolia } from '@particle-network/connectkit/chains';
 import { evmWalletConnectors } from '@particle-network/connectkit/evm';
 // evm end
 
@@ -36,7 +36,6 @@ const config = createConfig({
   appearance: {
     recommendedWallets: [
       { walletId: 'metaMask', label: 'Recommended' },
-      // { walletId: 'coinbaseWallet', label: 'Popular' },
     ],
     language: 'en-US',
   },

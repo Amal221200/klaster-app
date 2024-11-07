@@ -12,13 +12,12 @@ import {
     rawTx,
     singleTx,
 } from "klaster-sdk";
-import { createWalletClient, custom, encodeFunctionData, erc20Abi, http, parseEther } from "viem";
+import { encodeFunctionData, erc20Abi } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
-import { sepolia, arbitrumSepolia, baseSepolia } from "viem/chains";
-import { lifiBridgePlugin } from "./bridge-plugin";
+import { sepolia, baseSepolia } from "viem/chains";
 import { acrossBridgePlugin } from "./across-bridge-plugin";
 
-const privateKey = '0x301575511f576037a4a971741beeb2dc1045c13539f9206970f8d600db9835e1';
+const privateKey = '0x0effbd31e23ac864da269d33eec9128b6d600c0af3086598895593fc0fc384f4';
 const signerAccount = privateKeyToAccount(privateKey);
 
 export const klasterAccount = async () => {
@@ -81,7 +80,7 @@ export const klasterQuote = async (usdcAmount: number) => {
     });
 
     console.log(bridgeingOps.totalReceivedOnDestination);
-    
+
 
     const sendERC20Op = rawTx({
         gasLimit: 120000n,
