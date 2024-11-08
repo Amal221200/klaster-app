@@ -10,7 +10,7 @@ export default function Header() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <div className={styles['nav-start']}>
-          <div className={styles['nav-start-slogan']}>lending network</div>
+          <div className={styles['nav-start-slogan']}>CrossKlaster</div>
         </div>
       
         <div className={styles['nav-end']}>
